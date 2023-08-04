@@ -4,6 +4,7 @@
  */
 package tienda.servicios;
 
+import java.util.Collection;
 import java.util.Scanner;
 import tienda.entidades.Fabricante;
 
@@ -47,4 +48,26 @@ public class FabricantesService {
             
         } while (Fabricante.getNombre() == null || Fabricante.getNombre().isEmpty() );
     }
+     
+     public Fabricante seleccionarFabricante(int id) throws Exception{
+         try {
+               if (id == 0) {
+                throw new Exception("DEBE DE INDICAR EL ID");
+            }
+            
+               Fabricante fab=faDAO.buscarFabricanteID(id);
+              return  fab;
+         } catch (Exception e) {
+             throw e;
+         }
+     }
+     
+     
+     public void mostrarFabricante() throws Exception{
+         Collection<Fabricante> fabricantes=faDAO.listarFabricante();
+        
+         
+         
+     }
+     
 }

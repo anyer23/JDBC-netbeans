@@ -81,6 +81,7 @@ public class Services {
                     fser.crearFabricante();
                     break;
                 case 8:
+                    pser.modificarProducto();
                     break;
                 default:
                     System.out.println("Opcion invalida");

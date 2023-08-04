@@ -14,13 +14,13 @@ public class Producto {
     private int codigo;
     private String nombre;
     private double precio;
-    private int codigo_fabricante;
-    //private Fabricante codigo_fabricante;
+    //private int codigo_fabricante;
+    private Fabricante codigo_fabricante;
     
     public Producto() {
     }
 
-    public Producto(int codigo, String nombre, double precio,int codigo_fabricante) {
+    public Producto(int codigo, String nombre, double precio,Fabricante codigo_fabricante) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
@@ -51,11 +51,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getCodigo_fabricante() {
+    public Fabricante getCodigo_fabricante() {
         return codigo_fabricante;
     }
 
-    public void setCodigo_fabricante(int codigo_fabricante) {
+    public void setCodigo_fabricante(Fabricante codigo_fabricante) {
         this.codigo_fabricante = codigo_fabricante;
     }
 
